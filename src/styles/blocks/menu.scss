@@ -84,6 +84,22 @@
       & .menu__dropdown {
         top: 0;
       }
+
+      & .menu__toggle {
+        & span {
+          display: none;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          top: 12px;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 12px;
+        }
+      }
     }
     &__list {
       flex-direction: column;

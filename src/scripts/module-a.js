@@ -101,22 +101,44 @@
 
   const menuLinks = document.querySelectorAll('.menu__link');
   
+
+
+
+
   menuLinks.forEach((menuLink) => {
     menuLink.addEventListener('click', (e) => {
+      
+
       e.preventDefault();
 
-
       let blockId = menuLink.getAttribute('href')
-
       if (blockId != "#") {
           document.querySelector(blockId).scrollIntoView({
             behavior: 'smooth',
           })
       }
 
+      //для мобилки закрытия меню берем родитель меню
+      const parentMenu = findParent(menuLink, '.menu');
+      if(parentMenu !== false) {
+        if (parentMenu.classList.contains('is-open')) {
+          parentMenu.classList.toggle('is-open');
+          body.classList.toggle('body--locked')
+        }
+      }
+
+
 
     })
   })
+
+
+
+  
+
+  function findParent(el, selector) {
+    return el.closest(selector) !== null ? el.closest(selector) : false;
+  }
 
 
 
