@@ -1,0 +1,29 @@
+.socials {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    & + .socials__item {
+      margin-left: 30px;
+    }
+
+  }
+  &__link {
+    /**/
+  }
+  &__img {
+    fill: $main-color;
+    width: 25px;
+    height: 25px;
+    &:hover {
+      fill: $link-color-hover;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .socials {
+    order: 10;
+  }
+}

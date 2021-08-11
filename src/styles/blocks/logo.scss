@@ -1,0 +1,16 @@
+.logo {
+  & .logo__link {
+    font-size: 40px;
+    color: $main-color;
+    text-decoration: none;
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .logo {
+    flex: 0.6;
+  }
+}
