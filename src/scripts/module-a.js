@@ -119,15 +119,30 @@
   })
 
 
-  const servicesButtons = document.querySelectorAll('.services__btn');
 
-  servicesButtons.forEach((servicesButton) => {
-    servicesButton.addEventListener('click', (e) => {
+
+
+
+
+
+  function addTelegramLinks(element) {
+    element.addEventListener('click', (e) => {
       e.preventDefault();
 
       location = 'https://t.me/turalinov';
-      
+
     })
+  }
+
+
+  const servicesButtons = document.querySelectorAll('.services__btn');
+  servicesButtons.forEach((servicesButton) => {
+    addTelegramLinks(servicesButton)
+  })
+
+  const offerButtons = document.querySelectorAll('.offer__btn');
+  offerButtons.forEach((offerButton) => {
+    addTelegramLinks(offerButton)
   })
 
 
