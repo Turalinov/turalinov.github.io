@@ -1,6 +1,6 @@
 :root {
   box-sizing: border-box;
-  font-size: calc(1vw + 0.6em);
+  font-size: calc(1vw + 0.8em);
 }
 
 *,
@@ -16,6 +16,7 @@ body {
 }
 
 body {
+  font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -66,16 +67,16 @@ button {
 }
 
 .btn {
-  color: $secondary-color;
-  background-color: $main-color;
+  color: $main-color;
+  background-color: $secondary-color;
   padding: 20px 40px;
   border-radius: 35px;
-  font-size: 24px;
-  border: 1px solid $secondary-color;
+  font-size: 16px;
+  border: 1px solid transparent;
   &:hover {
-    color: $main-color;
-    background-color: $secondary-color;
-    border-color: transparent;
+    color: $secondary-color;
+    background-color: $main-color;
+    border-color: $secondary-color;
   }
 }
 
@@ -94,19 +95,19 @@ h6 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 h2 {
-  font-size: 55px;
-}
-
-h3 {
   font-size: 40px;
 }
 
-h4 {
+h3 {
   font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
 }
 
 h5 {
@@ -114,7 +115,8 @@ h5 {
 }
 
 p {
-  font-size: 24px;
+  font-size: 16px;
+  margin: 0;
 }
 
 img {
@@ -156,6 +158,9 @@ img {
 
 
 @media (max-width: $breakpoint-tablet) {
+  :root {
+    font-size: calc(1vw + 1.2em);
+  }
   .container {
     width: initial;
     padding: 0 3em;
@@ -168,7 +173,7 @@ img {
 
 @media (max-width: $breakpoint-mobile) {
   :root {
-    font-size: calc(1vw + 1em);
+    font-size: calc(1vw + 1.3em);
   }
   .container {
     padding: 0 1.2em;

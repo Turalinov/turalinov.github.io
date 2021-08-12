@@ -6,7 +6,7 @@
   }
 
   &__decor-1 {
-    top: 1000px;
+    top: 100%;
     right: 90%;
     background-image: url('images/dot-sm-w.png');
   }
@@ -17,10 +17,10 @@
   }
 
   &__decor-3 {
-    top: 340px;
-    right: 80%;
-    width: 226px!important;
-    height: 461px!important;
+    top: 40%;
+    right: 75%;
+    width: 326px!important;
+    height: 561px!important;
     background-image: url('images/way.png');
   }
 
@@ -55,6 +55,7 @@
     border-left: 1px solid rgba($main-color, 10%);
   }
   &__greeting {
+    margin-bottom: 30px;
     transform: translate(110%, 0);
     opacity: 0;
     transition: all 1s ease 0s;
@@ -72,6 +73,9 @@
     &._active {
       opacity: 1;
       transform: translate(0, 0);
+    }
+    & p {
+      margin-bottom: 20px;
     }
   }
   &__desc a:link {

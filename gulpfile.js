@@ -120,7 +120,7 @@ task('watch', () => {
   watch(`./${SRC_PATH}/*.html`, series('copy:html'))
   watch(`./${SRC_PATH}/scripts/*.js`, series('scripts'))
   watch(`./${SRC_PATH}/images/icons/*.svg`, series('icons'))
-  watch(`./${SRC_PATH}/images/*.png`, series('images'))
+  watch([`./${SRC_PATH}/images/*.png`, `./${SRC_PATH}/images/*.svg`], series('images'))
 
 })
 

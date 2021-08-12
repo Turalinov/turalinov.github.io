@@ -1,7 +1,6 @@
 .portfolio {
   padding: 120px 0;
   background-color: $main-color;
-  font-size: 24px;
   &__title {
     text-align: center;
     color: $secondary-color;
@@ -35,12 +34,7 @@
     }
 
     & .slick-slide {
-      opacity: 0;
-      transition: all 1.2s ease .5s;
-      &.slick-active,
-      &.slick-current {
-        opacity: 1;
-      }
+      margin: 0 10px;
     }
 
     & .slick-dots {
@@ -50,8 +44,8 @@
         border-radius: 50%;
         margin-left: 16px;
         margin-right: 16px;
-        width: 16px;
-        height: 16px;
+        width: 12px;
+        height: 12px;
         &.slick-active {
           background-color: $secondary-color;
         }
@@ -67,38 +61,69 @@
 
       }
     }
-  }
-  &__slider-item-inner {
-    display: flex;
-    background-color: $secondary-color;
-    border-radius: 35px;
-    overflow: hidden;
-  }
-  &__slider-left {
-    min-width: 40%;
-    padding: 80px 0 0 80px;
-  }
-  &__slider-img {
-    border-radius: 35px;
-    overflow: hidden;
-  }
-  &__slider-right {
-    padding: 70px;
-  }
-  &__category {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 37px;
-    color: rgba($main-color, 40%);
-    &-title {
-      text-transform: uppercase;
+    &-item {
+      margin: 0 10px;
+    }
+    &-item-inner {
+      display: flex;
+      flex-direction: column;
+      border-radius: 35px;
+      overflow: hidden;
+    }
+    &-top {
+      height: 168px;
+      overflow: hidden;
+    }
+    &-bottom {
+      background-color: $secondary-color;
+      padding: 35px;
+    }
+    &-img {
+      height: 168px;
+      object-fit: cover;
     }
   }
   &__name {
-    margin-bottom: 37px;
+    margin-bottom: 15px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    color: rgba($main-color, 40%);
+    margin-bottom: 30px;
+  }
+  &__days {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      background-image: url('images/calendar.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 26px;
+      height: 26px;
+    }
+  }
+  &__category {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      background-image: url('images/category.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 26px;
+      height: 26px;
+    }
   }
   &__text {
-    margin-bottom: 58px;
+    margin-bottom: 20px;
   }
   &__links {
     display: flex;
@@ -151,40 +176,5 @@
 @media (max-width: $breakpoint-mobile) {
   .portfolio {
     padding: 50px 0 100px;
-
-    &__slider {
-      & .slick-arrow {
-        width: 80px;
-        height: 80px;
-      }
-
-
-      &-left {
-        padding: 40px 0 0 40px;
-      }
-
-      &-right {
-        padding: 40px;
-      }
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile-sm) {
-  .portfolio {
-    &__slider {
-      &-item {
-        &-inner {
-          flex-direction: column;
-        }
-      }
-      &-left {
-        padding: 40px 40px 0 40px;
-      }
-
-      &-right {
-        padding: 40px;
-      }
-    }
   }
 }

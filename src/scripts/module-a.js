@@ -73,16 +73,19 @@
   $(document).ready(function() {
     $('.portfolio__slider').slick({
       infinite: false,
-      centerMode: true,
       centerPadding: "60px",
       dots: true,
       focusOnSelect: true,
       speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
           breakpoint: 768, 
           settings: {
             centerPadding: '20px',
+            slidesToShow: 2,
+            slidesToScroll: 2,
           }
         },
         {
@@ -90,6 +93,8 @@
           settings: {
             arrows: false,
             centerPadding: 0,
+            slidesToShow: 1,
+            slidesToScroll: 1,
           }
         }
       ]
