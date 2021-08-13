@@ -15,46 +15,12 @@
   &__item {
     background-color: $main-color;
     border-radius: 35px;
-    padding: 50px;
+    padding: 35px;
     margin: 0 10px 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
-
-    &:nth-child(1) {
-      transform: translate(-100%, 0);
-      opacity: 0;
-      transition: all 0.8s ease 0s;
-
-      &._active {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
-    }
-
-    &:nth-child(2) {
-      transform: translate(0, -50%);
-      opacity: 0;
-      transition: all 0.8s ease .2s;
-
-      &._active {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
-    }
-
-    &:nth-child(3) {
-      transform: translate(100%, 0);
-      opacity: 0;
-      transition: all 0.8s ease 0s;
-
-      &._active {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
-    }
-
-    
+   
   }
 
   &__top {
@@ -63,7 +29,7 @@
   }
 
   &__name {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     text-align: center;
 
   }
@@ -75,7 +41,7 @@
   }
   &__stage {
     & + .services__stage {
-      margin-top: 15px;
+      margin-top: 5px;
     }
     &::before {
       content: '';
@@ -92,7 +58,6 @@
   }
   &__price {
     display: flex;
-    font-size: 18px;
     &::before {
       content: '';
       display: inline-block;
