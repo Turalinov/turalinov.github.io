@@ -22,46 +22,35 @@
     flex-direction: column;
 
     &:nth-child(1) {
-      // transform: translate(-100%, 0);
-      // opacity: 0;
+      transform: translate(-100%, 0);
+      opacity: 0;
       transition: all 0.8s ease 0s;
 
       &._active {
-        // transform: translate(0, 0);
-        // opacity: 1;
+        transform: translate(0, 0);
+        opacity: 1;
       }
     }
 
     &:nth-child(2) {
-      // transform: translate(0, -50%);
-      // opacity: 0;
-      // transition: all 0.8s ease .2s;
+      transform: translate(0, -50%);
+      opacity: 0;
+      transition: all 0.8s ease .2s;
 
       &._active {
-        // transform: translate(0, 0);
-        // opacity: 1;
+        transform: translate(0, 0);
+        opacity: 1;
       }
     }
 
     &:nth-child(3) {
-      // transform: translate(0, 50%);
-      // opacity: 0;
-      // transition: all 0.8s ease .0s;
+      transform: translate(100%, 0);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
 
       &._active {
-        // transform: translate(0, 0);
-        // opacity: 1;
-      }
-    }
-
-    &:nth-child(4) {
-      // transform: translate(100%, 10%);
-      // opacity: 0;
-      // transition: all 0.8s ease .6s;
-
-      &._active {
-        // transform: translate(0, 0);
-        // opacity: 1;
+        transform: translate(0, 0);
+        opacity: 1;
       }
     }
 

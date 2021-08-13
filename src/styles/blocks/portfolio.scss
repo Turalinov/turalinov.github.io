@@ -38,7 +38,7 @@
     }
 
     & .slick-dots {
-      bottom: -80px;
+      bottom: -40px;
       & li {
         background-color: rgba($secondary-color, 22%);
         border-radius: 50%;
@@ -137,6 +137,11 @@
         color: $link-color-hover;
       }
     }
+  }
+  &__more {
+    margin-top: 80px;
+    text-align: center;
+    color: $secondary-color;
   }
 }
 @keyframes dots-prev {
