@@ -75,8 +75,15 @@
 
 @media (max-width: $breakpoint-tablet) {
   .reviews {
+    padding: 80px 0 80px;
     &__item {
       margin-bottom: 20px;
     }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .reviews {
+    padding: 50px 0 50px;
   }
 }
