@@ -27,7 +27,7 @@ task("clean", () => {
 
 
 task("copy:html", () => {
-  return src(`${SRC_PATH}/*.html`)
+  return src([`${SRC_PATH}/*.html`, `${SRC_PATH}/*.xml`])
     .pipe(dest(DIST_PATH))
     .pipe(reload({stream: true}))
 });
