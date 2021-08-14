@@ -91,9 +91,14 @@
       opacity: 1;
     }
 
-    &-item {      
+    &-item {
+      padding: 10px;
+      border-right: 1px solid rgba($main-color, 0.2);
       &+.offer__bullits-item {
         margin-left: 30px;
+      }
+      &:last-child {
+        border-right: none;
       }
     }
 
