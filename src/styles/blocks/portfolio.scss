@@ -26,11 +26,11 @@
 
     & .slick-prev {
       animation: dots-prev 2s ease-in-out infinite;
-      left: 0px;
+      left: -30px;
     }
     & .slick-next {
       animation: dots-next 2s ease-in-out infinite;
-      right: 0px;
+      right: -30px;
     }
 
     & .slick-slide {
