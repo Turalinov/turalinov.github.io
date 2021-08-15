@@ -19,6 +19,7 @@
     background-color: $secondary-color;
     overflow: hidden;
     z-index: $z-modal-body;
+    border-radius: 35px;
   }
   &__close {
     position: absolute;

@@ -192,7 +192,8 @@
   })
 
   youtubeModalClose.addEventListener('click', (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
+    youtubeFrame.src = ``;
     youtubeModal.style.display = 'none'
   })
 
