@@ -174,6 +174,29 @@
 
 
 
+  const youtubeLinks = document.querySelectorAll('.portfolio__youtube-link')
+  const youtubeModal = document.getElementById('youtube-modal')
+  const youtubeModalClose = document.getElementById('youtube-close')
+  const youtubeFrame = document.getElementById('youtube-frame')
+ 
 
+  youtubeLinks.forEach(( youtubeLink ) => {
+    youtubeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      let id = getYoutubeId(youtubeLink);
+      youtubeFrame.src = `https://www.youtube.com/embed/${id}?controls=0`;
+      setTimeout(() => {
+        youtubeModal.style.display = 'block'
+      }, 1000);
+    })
+  })
 
+  youtubeModalClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    youtubeModal.style.display = 'none'
+  })
+
+  function getYoutubeId(el) {
+    return el.dataset.id;
+  }
 })()

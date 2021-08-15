@@ -9,4 +9,7 @@ $breakpoint-tablet: 768px;
 $breakpoint-mobile: 576px;
 $breakpoint-mobile-sm: 480px;
 
+$z-modal-back: 300;
+$z-modal-body: 400;
+
 @import "./blocks/*.scss";

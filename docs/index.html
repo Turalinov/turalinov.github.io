@@ -211,7 +211,9 @@
                   <div class="portfolio__text">Разработал адаптивный дизайн для трёх резрешений, сверстал, а также
                     интегрировал на CMS Wordpress. Настроил мультиязычность сайта.</div>
                   <div class="portfolio__links">
-                    <a href="https://youtu.be/eIU6gk0loQI" target="blank" title="ссылка на youtube канал">Видеобзор</a>
+                    <a href="#" class="portfolio__youtube-link" data-id="eIU6gk0loQI"
+                      target="blank"
+                      title="ссылка на youtube канал">Видеобзор</a>
                     <a href="https://protalents.ru/" target="blank" title="ссылка на сайт" rel="nofollow">Перейти</a>
                   </div>
                 </div>
@@ -231,7 +233,8 @@
                   <div class="portfolio__text">Сверстал сайт, запрограммировал выбор услуг с корзиной. Подключил форму
                     от ЮMoney.</div>
                   <div class="portfolio__links">
-                    <a href="https://youtu.be/u-kgRRf18vg" target="blank" title="ссылка на youtube канал">Видеобзор</a>
+                    <a href="#" class="portfolio__youtube-link" data-id="u-kgRRf18vg" target="blank"
+                      title="ссылка на youtube канал">Видеобзор</a>
                     <a href="https://sagida.ru/" target="blank" title="ссылка на сайт" rel="nofollow">Перейти</a>
                   </div>
                 </div>
@@ -251,7 +254,8 @@
                   <div class="portfolio__text">Сверстал сайт, интегрировал на CMS Wordpress. Настроил модуль отзывов для
                     модерирования из админки.</div>
                   <div class="portfolio__links">
-                    <a href="https://youtu.be/N6pfTmCRMHM" target="blank" title="ссылка на youtube канал">Видеобзор</a>
+                    <a href="#" class="portfolio__youtube-link" data-id="N6pfTmCRMHM" target="blank"
+                      title="ссылка на youtube канал">Видеобзор</a>
                     <a href="https://monada-auto.ru/" target="blank" title="ссылка на сайт" rel="nofollow">Перейти</a>
                   </div>
                 </div>
@@ -440,6 +444,24 @@
         &copy; 2021 Туралинов Руслан
       </div>
     </footer>
+
+
+    <div class="modal" id="youtube-modal">
+      <div class="modal__backdrop"></div>
+      <div class="modal__body">
+        <button class="modal__close" id="youtube-close">закрыть</button>
+        <h3 class="modal__title">Видеообзор проекта</h3>
+        <div class="modal__video">
+          <iframe id="youtube-frame" width="100%" height="100%" src="https://www.youtube.com/embed/eIU6gk0loQI?controls=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+          
+      </div>
+    </div>
+
+
   </div>
   <script src="main.min.js"></script>
 </body>
