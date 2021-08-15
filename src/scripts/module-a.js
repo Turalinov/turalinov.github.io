@@ -79,6 +79,7 @@
       speed: 1000,
       slidesToShow: 3,
       slidesToScroll: 3,
+      adaptiveHeight: true,
       responsive: [
         {
           breakpoint: 768, 
@@ -86,6 +87,7 @@
             centerPadding: '20px',
             slidesToShow: 2,
             slidesToScroll: 2,
+            adaptiveHeight: true,
           }
         },
         {
@@ -95,10 +97,45 @@
             centerPadding: 0,
             slidesToShow: 1,
             slidesToScroll: 1,
+            adaptiveHeight: true,
           }
         }
       ]
-    })
+    });
+
+
+
+    $('.reviwes__slider').slick({
+      infinite: false,
+      centerPadding: "60px",
+      dots: true,
+      focusOnSelect: true,
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            centerPadding: '20px',
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            adaptiveHeight: true,
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            arrows: false,
+            centerPadding: 0,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+          }
+        }
+      ]
+    });
   })
 
 

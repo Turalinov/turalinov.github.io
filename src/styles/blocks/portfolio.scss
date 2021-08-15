@@ -7,60 +7,6 @@
     margin-bottom: 50px;
   }
   &__slider {
-    & .slick-arrow {
-      
-      background-color: $main-color;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 1px solid $secondary-color;
-      z-index: 1;
-      &::before {
-        font-size: 25px;
-        color: $secondary-color;
-      }
-      &.slick-disabled {
-        opacity: .5;
-      }
-    }
-
-    & .slick-prev {
-      animation: dots-prev 2s ease-in-out infinite;
-      left: -30px;
-    }
-    & .slick-next {
-      animation: dots-next 2s ease-in-out infinite;
-      right: -30px;
-    }
-
-    & .slick-slide {
-      margin: 0 10px;
-    }
-
-    & .slick-dots {
-      bottom: -40px;
-      & li {
-        background-color: rgba($secondary-color, 22%);
-        border-radius: 50%;
-        margin-left: 16px;
-        margin-right: 16px;
-        width: 12px;
-        height: 12px;
-        &.slick-active {
-          background-color: $secondary-color;
-        }
-        & button {
-          width: inherit;
-          height: inherit;
-          &::before {
-            font-size: 0;
-            width: inherit;
-            height: inherit;
-          }
-        }
-
-      }
-    }
     &-item {
       margin: 0 10px;
     }
@@ -139,7 +85,7 @@
     }
   }
   &__more {
-    margin-top: 80px;
+    margin-top: 20px;
     text-align: center;
     color: $secondary-color;
   }
@@ -170,12 +116,6 @@
 @media (max-width: $breakpoint-tablet) {
   .portfolio {
     padding: 80px 0 100px;
-    &__slider {
-      & .slick-arrow {
-        width: 80px;
-        height: 80px;
-      }
-    }
   }
 }
 @media (max-width: $breakpoint-mobile) {
