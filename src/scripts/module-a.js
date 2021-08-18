@@ -240,39 +240,94 @@
 
 
 
-  // //В переменную $token нужно вставить токен, который нам прислал @botFather
-  // const token = "1989532942:AAHEqV7pvCIT66qD0h6i0ijYGETdmqm5cRQ";
-  // //Сюда вставляем chat_id
-  // const chatId = "791403199";
-  // const name = 'Ivanov Ivan';
-  // const phone = '+356955251221';
-  // const data = {
-  //   name,
-  //   phone
-  // };
+  let forms = document.querySelectorAll('.form__elem');
 
-  // let text = '';
-  // for( let key in data ) {
-  //   text += `<b>${key}</b> ${data[key]}\n`;
-  // }
 
-  // const parse_mode = "HTML";
 
-  // const requestOptionsPush = {
-  //   method: 'POST',
-  //   headers: {
-  //     'Accept': 'application/json, text/plain, */*',
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(
-  //     { chat_id: chatId, parse_mode: parse_mode, text: text }
-  //   )
-  // };
+  forms.forEach( form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      let formWrapper = form.closest('.form')
+      let request = formWrapper.querySelector('.form__request');
+      let answer = formWrapper.querySelector('.form__answer');
 
-  // fetch(`https://api.telegram.org/bot${token}/sendMessage`, requestOptionsPush)
-  //   .then(response => response.json())
-  //   .then(response => {
-  //     console.log(response);
-  //   });
+
+
+
+      let inputs = form.elements;
+      let obj = {};
+
+      for (let i = 0; i < inputs.length; i++) {
+
+
+
+        let item = inputs.item(i)
+        let name = item.name;
+        let val = String(item.value).trim();
+        let tag = item.tagName.toLowerCase();
+
+        if (tag == 'button') {
+          continue;
+        }
+
+
+        if (val == ""){
+          item.style.border = "2px solid red";
+          return false;
+        } else {
+          item.style.border = "none";
+          obj[name] = val;
+        } 
+        
+        console.log(obj);
+      }
+
+      //В переменную $token нужно вставить токен, который нам прислал @botFather
+      const token = "1989532942:AAHEqV7pvCIT66qD0h6i0ijYGETdmqm5cRQ";
+      //Сюда вставляем chat_id
+      const chatId = "791403199";
+
+      let text = '';
+      for( let key in obj ) {
+        text += `<b>${key}</b> ${obj[key]}\n`;
+      }
+
+      const parse_mode = "HTML";
+
+      const requestOptionsPush = {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(
+          { chat_id: chatId, parse_mode: parse_mode, text: text }
+        )
+      };
+
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, requestOptionsPush)
+        .then(response => response.json())
+        .then(response => {
+          if (response.ok) {
+            form.reset();
+            request.style.display = "none"
+            answer.style.display = "block"
+
+
+          }
+        });
+
+
+
+    })
+  })
+
+
+
+
+
+
+
 
 })()

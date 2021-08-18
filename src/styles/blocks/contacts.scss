@@ -30,7 +30,13 @@
 
 @media (max-width: $breakpoint-tablet) {
   .contacts {
-    padding: 80px 0 80px
+    padding: 80px 0 80px;
+    &__form {
+      margin: 0 auto;
+    }
+    &__map {
+      display: none;
+    }
   }
 }
 
