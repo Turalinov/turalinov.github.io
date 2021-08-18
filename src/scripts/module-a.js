@@ -237,4 +237,42 @@
   function getYoutubeId(el) {
     return el.dataset.id;
   }
+
+
+
+  // //В переменную $token нужно вставить токен, который нам прислал @botFather
+  // const token = "1989532942:AAHEqV7pvCIT66qD0h6i0ijYGETdmqm5cRQ";
+  // //Сюда вставляем chat_id
+  // const chatId = "791403199";
+  // const name = 'Ivanov Ivan';
+  // const phone = '+356955251221';
+  // const data = {
+  //   name,
+  //   phone
+  // };
+
+  // let text = '';
+  // for( let key in data ) {
+  //   text += `<b>${key}</b> ${data[key]}\n`;
+  // }
+
+  // const parse_mode = "HTML";
+
+  // const requestOptionsPush = {
+  //   method: 'POST',
+  //   headers: {
+  //     'Accept': 'application/json, text/plain, */*',
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(
+  //     { chat_id: chatId, parse_mode: parse_mode, text: text }
+  //   )
+  // };
+
+  // fetch(`https://api.telegram.org/bot${token}/sendMessage`, requestOptionsPush)
+  //   .then(response => response.json())
+  //   .then(response => {
+  //     console.log(response);
+  //   });
+
 })()

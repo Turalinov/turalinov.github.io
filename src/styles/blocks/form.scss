@@ -1,0 +1,36 @@
+.form {
+  background-color: $main-color;
+  color: $secondary-color;
+  padding: 60px;
+  border-radius: 35px;
+  text-align: center;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__elem {
+
+  }
+  &__row {
+    display: flex;
+    & + .form__row {
+      margin-top: 15px;
+    }
+  }
+  &__input {
+    width: 100%;
+    border-radius: 35px;
+    padding: 20px 40px;
+    outline: none;
+    border: none;
+    &:focus {
+      box-shadow: 0 0 0 1px yellow;
+    }
+    &--textarea {
+      resize: vertical;
+      height: 130px;
+    }
+  }
+  &__btn {
+    width: 100%;
+  }
+}
