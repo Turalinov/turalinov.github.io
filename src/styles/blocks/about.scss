@@ -78,12 +78,9 @@
       margin-bottom: 20px;
     }
   }
-  &__desc a:link {
-    color: $main-color;
-    text-decoration: none;
-  }
   &__desc a:hover {
     text-decoration: underline;
+    color: $main-color;
   }
   
 }

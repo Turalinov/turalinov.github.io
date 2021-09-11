@@ -30,6 +30,7 @@ body {
 
 
 a:link {
+  transition: all 0.2s ease-out;
   color: $link-color;
 }
 
@@ -72,6 +73,7 @@ button {
   border-radius: 35px;
   font-size: 16px;
   border: 1px solid $secondary-color;
+  transition: all .5s ease;
   &:hover {
     color: $main-color;
     background-color: $secondary-color;

@@ -62,10 +62,15 @@
     margin: 0 auto;
     transform: translate(0, 120%);
     opacity: 0;
-    transition-property: transform, opacity;
-    transition-duration: 1s;
+    transition-property: transform, opacity, background-color, color, border;
+    transition-duration: 1s,
+    1s,
+    0.5s;
     transition-timing-function: ease;
-    transition-delay: .8s;
+    transition-delay: .8s,
+    .8s,
+    0s,
+    0s;
 
     &._active {
       transform: translate(0, 0);

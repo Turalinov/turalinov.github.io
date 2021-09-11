@@ -16,8 +16,11 @@
     fill: $main-color;
     width: 25px;
     height: 25px;
+    transition: all 0.2s ease-out;
+    transform: scale(1);
     &:hover {
       fill: $link-color-hover;
+      transform: scale(1.1);
     }
   }
 }
