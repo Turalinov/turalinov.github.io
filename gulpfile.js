@@ -1,14 +1,14 @@
-const { src, dest, task, series, watch, parallel} = require('gulp'); //src - считывает файл, dest - копирует файлы в новое место, task - создает задачу, series - для выполнения несколько задач за 1 раз и порядка их очереди, whatch - для отслеживания изменения файлов в каталоге и запуска задач
+const { src, dest, task, series, watch, parallel} = require('gulp'); //src - считывает файл, dest - копирует файлы в новое место, task - создает задачу, series - для выполнения несколько задач за 1 раз и порядка их очереди, watch - для отслеживания изменения файлов в каталоге и запуска задач
 const rm = require('gulp-rm'); //rm - плагин для очистки файлов каталоге
 const sass = require('gulp-sass')(require('sass')); //sass - для преобразования scss  в css
 const concat = require('gulp-concat'); //concat - для объяединение несколько файлов в один
 const browserSync = require('browser-sync').create(); // browserSync - для поднятия сервера
 const reload = browserSync.reload; // reload для автоматической перезагрузки страницы после изменения в html
-const sassGlob = require('gulp-sass-glob'); //sassGlob  -для поддержки поделючения файлов scss через * паттерн в @import
+const sassGlob = require('gulp-sass-glob'); //sassGlob  -для поддержки подключения файлов scss через * паттерн в @import
 const autoprefixer = require('gulp-autoprefixer'); //для проставления префиксов
 const px2rem = require('gulp-smile-px2rem'); // для рассчета px в rem
 const gcmq = require('gulp-group-css-media-queries'); // для группировки media queries
-const cleanCSS = require('gulp-clean-css'); // улаляет комментарий и минифицирует в одну строку
+const cleanCSS = require('gulp-clean-css'); // удаляет комментарий и минифицирует в одну строку
 const sourcemaps = require('gulp-sourcemaps'); // для создания sourcemaps
 const babel = require('gulp-babel'); //для трансляции es6 js 
 const uglify = require('gulp-uglify'); //для минификации js
