@@ -1,2 +1,13 @@
 node_modules
 .DS_Store
+gulp
+src
+gulpfile.js
+package-lock.json
+package.json
+.jshintrc
+.stylelintrc
+.editorconfig
+PHPMailer
+action-form.php
+
