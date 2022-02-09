@@ -1175,7 +1175,7 @@ button:focus {
   font-size: 0.5rem;
 }
 @media screen and (max-width: 768px) {
-  .menu__list .menu__list {
+  .menu__list {
     flex-direction: column;
     font-size: 0.75rem;
   }
@@ -1185,7 +1185,7 @@ button:focus {
   margin-left: 1.5625rem;
 }
 @media screen and (max-width: 768px) {
-  .menu__item + .menu__item .menu__item + .menu__item {
+  .menu__item + .menu__item {
     margin-top: 0.9375rem;
     margin-left: 0;
   }
